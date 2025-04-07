@@ -1,61 +1,89 @@
 body {
-    background-color: #ffd5ed;
-    margin: 0;
-    font-family: Arial, sans-serif;
+  background-color: #ffd5ed;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 .calc {
-    margin: 50px auto;
-    width: 420px;
-    border-radius: 30px;
-    background:  #ffbfe3;
-    color: #ff009d;;
-    padding: 20px;
-    box-shadow: 5px 5px 5px #ab98a7;
+  margin: 50px auto;
+  width: 420px;
+  border-radius: 30px;
+  background: #ffbfe3;
+  color: #ff009d;
+  padding: 20px;
+  box-shadow: 5px 5px 5px #ab98a7;
 }
 
 .name {
-    text-align: left;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-    user-select: none;
+  text-align: left;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  user-select: none;
 }
 
 .result {
-    height: 70px;
-    padding: 10px;
-    background: #ffb3de;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    border-radius: 30px;
-    margin-bottom: 20px;
-    overflow-x: auto;
-    position: relative;
+  height: auto;
+  min-height: 70px;
+  padding: 10px;
+  background: #ffb3de;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  overflow-x: hidden;
+  position: relative;
 }
 
-.result p {
-    font-size: 3rem;
-    margin: 0;
-    color: black;
-    word-break: break-word;
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+#expression {
+  min-height: 18px;
+  font-size: 1rem;
+  color: #5e5e5e;
+  margin-bottom: 5px;
+  max-width: 100%;
+  padding-right: 5px;
+  scrollbar-width: thin;
+}
+
+#expression::-webkit-scrollbar {
+  height: 5px;
+}
+
+#expression::-webkit-scrollbar-thumb {
+  background-color: #ff009d;
+  border-radius: 3px;
+}
+
+.result #output {
+  font-size: 3rem;
+  margin: 0;
+  color: black;
+  word-break: break-word;
 }
 
 .memory-texts {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    margin-left: 3px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin-left: 3px;
 }
-  
+
 .memory-text {
-    font-size: 1rem;
-    color: snow;
-    cursor: pointer;
-    transition: color 0.2s ease;
+  font-size: 1rem;
+  color: snow;
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
-  
+
 .memory-text:hover {
-    color: #fc008f;
+  color: #fc008f;
 }
