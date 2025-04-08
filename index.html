@@ -68,59 +68,63 @@
     <div class="conversion-btn-wrapper">
       <button id="conversionBtn">Conversions</button>
     </div>
-
+    
     <div class="conversion-options" id="conversionOptions">
       <div class="conversion-category">
         <h3>Length Conversion</h3>
-        <select>
+        <select id="fromLength">
           <option>Centimeters</option>
           <option>Meters</option>
           <option>Kilometers</option>
         </select>
-        <select>
+        <select id="toLength">
           <option>Centimeters</option>
           <option>Meters</option>
           <option>Kilometers</option>
         </select>
+        <button id="lengthConv">Convert</button>
       </div>
-
+      
       <div class="conversion-category">
         <h3>Weight & Mass Conversion</h3>
-        <select>
+        <select id="fromWeight">
           <option>Grams</option>
           <option>Kilograms</option>
           <option>Tonnes</option>
         </select>
-        <select>
+        <select id="toWeight">
           <option>Grams</option>
           <option>Kilograms</option>
           <option>Tonnes</option>
         </select>
+        <button id="weightConv">Convert</button>
       </div>
-
+    
       <div class="conversion-category">
         <h3>Area Conversion</h3>
-        <select>
+        <select id="fromArea">
           <option>Square Centimeters</option>
           <option>Square Meters</option>
           <option>Square Kilometers</option>
           <option>Hectares</option>
         </select>
-        <select>
+        <select id="toArea">
           <option>Square Centimeters</option>
           <option>Square Meters</option>
           <option>Square Kilometers</option>
           <option>Hectares</option>
         </select>
+        <button id="areaConv">Convert</button>
       </div>
     </div>
+    
     <div class="bg-buttons">
       <button id="setBgBtn">Set Hello Kitty Background</button>
       <button id="resetBgBtn">Reset Background</button>
     </div>
-
-    <script src="js/conversion.js"></script>
+    
     <script src="js/background.js"></script>
+    <script type="module" src="js/conversion.js"></script>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>

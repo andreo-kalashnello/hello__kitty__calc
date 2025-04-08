@@ -73,8 +73,14 @@ function handleNumber(num) {
 }
 
 function handleDecimal() {
-  if (!getOutputValue().includes(".")) {
-    appendToOutput(".");
+  let value = getOutputValue().trim()
+  if (value === "" || /[+\-×÷^n]$/.test(value)) {
+    appendToOutput("0.");
+  } else {
+    let number = value.split(" ");
+    if (!number[number.length - 1].includes(".")) {
+      appendToOutput(".");
+    }
   }
 }
 

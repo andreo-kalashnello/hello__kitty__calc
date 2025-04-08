@@ -34,8 +34,9 @@
     margin-bottom: 20px;
 }
 
+
 .conversion-category h3 {
-    color: #ff009d;
+    color: rgb(0, 0, 0);
 }
 
 .conversion-options select {
@@ -60,4 +61,21 @@
 
 #conversionOptions.show {
     display: block;
+}
+
+.conversion-category button {
+    background-color: #fc68bc;
+    border: none;
+    border-radius: 20px;
+    padding: 7px 15px;
+    font-size: 1rem;
+    color: snow;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.conversion-category button:hover {
+    filter: brightness(85%);
 }
