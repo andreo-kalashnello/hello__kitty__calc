@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/conversion.css" />
     <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/media.css" />
     <title>Calculator</title>
   </head>
 
@@ -24,18 +24,34 @@
 
       <div class="history-panel hidden" id="historyPanel">
         <button id="clearHistoryBtn">Clear History</button>
-        <div id="historyList"></div> 
+        <div id="historyList"></div>
       </div>
-      
+
       <div class="result">
         <div class="memory-texts">
           <span class="memory-text" id="history">History ↻</span>
           <span class="memory-text" id="insert">Insert</span>
         </div>
-      
+
         <div class="display">
           <p id="expression" class="secondary"></p>
           <div id="output" class="primary">0</div>
+          <button class="delete-btn" data-action="⌫">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              fill="#FF67BD"
+              version="1.1"
+              id="Layer_1"
+              width="40px"
+              height="32px"
+              viewBox="0 0 92 92"
+              enable-background="new 0 0 92 92"
+              xml:space="preserve">
+              <path
+                d="M88,20H29c-1,0-1.9,0.4-2.6,1l-25,22C0.5,43.8,0,44.9,0,46c0,1.2,0.5,2.2,1.4,3l25,22c0.7,0.6,1.7,1,2.6,1h59  c2.2,0,4-1.8,4-4V24C92,21.8,90.2,20,88,20z M84,64H30.5L10.1,46l20.5-18H84V64z M44.1,51.4l5.4-5.4l-5.4-5.4  c-1.4-1.4-1.4-3.6,0-4.9c1.4-1.4,3.6-1.4,4.9,0l5.4,5.4l5.4-5.4c1.4-1.4,3.6-1.4,4.9,0c1.4,1.4,1.4,3.6,0,4.9L59.4,46l5.4,5.4  c1.4,1.4,1.4,3.6,0,4.9c-0.7,0.7-1.6,1-2.5,1s-1.8-0.3-2.5-1l-5.4-5.4l-5.4,5.4c-0.7,0.7-1.6,1-2.5,1c-0.9,0-1.8-0.3-2.5-1  C42.8,55,42.8,52.8,44.1,51.4z" />
+            </svg>
+          </button>
         </div>
       </div>
 
@@ -69,6 +85,7 @@
         <button class="btn medium">0</button>
         <button class="btn medium">.</button>
         <button class="btn medium">=</button>
+
         <button class="btn normal">+</button>
       </div>
     </div>
@@ -76,7 +93,7 @@
     <div class="conversion-btn-wrapper">
       <button id="conversionBtn">Conversions</button>
     </div>
-    
+
     <div class="conversion-options" id="conversionOptions">
       <div class="conversion-category">
         <h3>Length Conversion</h3>
@@ -92,7 +109,7 @@
         </select>
         <button id="lengthConv">Convert</button>
       </div>
-      
+
       <div class="conversion-category">
         <h3>Weight & Mass Conversion</h3>
         <select id="fromWeight">
@@ -107,7 +124,7 @@
         </select>
         <button id="weightConv">Convert</button>
       </div>
-    
+
       <div class="conversion-category">
         <h3>Area Conversion</h3>
         <select id="fromArea">
@@ -125,12 +142,12 @@
         <button id="areaConv">Convert</button>
       </div>
     </div>
-    
+
     <div class="bg-buttons">
       <button id="setBgBtn">Set Hello Kitty Background</button>
       <button id="resetBgBtn">Reset Background</button>
     </div>
-    
+
     <script src="js/background.js"></script>
     <script src="js/history.js"></script>
     <script type="module" src="js/conversion.js"></script>

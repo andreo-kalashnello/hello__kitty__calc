@@ -19,7 +19,9 @@ let firstOperand = null;
 let resetNext = false;
 let baseConverted = false;
 
-const buttons = document.querySelectorAll(".buttons .btn, .memory-bar .btn");
+const buttons = document.querySelectorAll(
+  ".buttons .btn, .memory-bar .btn, .delete-btn"
+);
 buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const action = btn.dataset.action || btn.textContent.trim();
@@ -67,6 +69,8 @@ function handleButtonClick(label) {
       return convertBase("hex");
     case "DEC":
       return convertBase("dec");
+    case "⌫":
+      return handleDelete();
   }
 }
 
@@ -134,7 +138,6 @@ function calculate() {
     baseConverted = false;
 
     addToHistory(`${expr} = ${result}`);
-
   } catch (e) {
     updateOutput("Error");
   }
@@ -218,4 +221,21 @@ function convertBase(type) {
   updateExpression(`${raw} → ${type.toUpperCase()}`);
   resetNext = true;
   baseConverted = type !== "dec";
+}
+
+function handleDelete() {
+  let current = getOutputValue().trim();
+
+  if (current === "Error" || current.length <= 1) {
+    updateOutput("0");
+    return;
+  }
+
+  if (/[+\-×÷^n]$/.test(current)) {
+    const newValue = current.slice(0, -3).trim();
+    updateOutput(newValue || "0");
+  } else {
+    const newValue = current.slice(0, -1).trim();
+    updateOutput(newValue || "0");
+  }
 }

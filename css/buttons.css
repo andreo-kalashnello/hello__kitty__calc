@@ -49,6 +49,19 @@
   filter: brightness(60%);
 }
 
+.delete-btn {
+  width: 40px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 .bg-buttons {
   text-align: center;
   margin-top: 20px;

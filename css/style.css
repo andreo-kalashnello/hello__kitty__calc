@@ -73,8 +73,12 @@ body {
 .memory-texts {
   position: absolute;
   top: 10px;
-  left: 10px;
-  margin-left: 3px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
 }
 
 .memory-text {
@@ -86,10 +90,6 @@ body {
 
 .memory-text:hover {
   color: #fc008f;
-}
-
-#insert {
-  margin-left: 280px;
 }
 
 .history-panel {
