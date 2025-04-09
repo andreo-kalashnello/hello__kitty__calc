@@ -1,16 +1,17 @@
 .conversion-btn-wrapper {
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 10px;
 }
 
 #conversionBtn {
-    background-color: #fc90cd;
+    background-color: #fb83c7;
     color: snow;
     padding: 10px;
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
+    border: none;
     transition: background-color 0.3s ease;
 }
 

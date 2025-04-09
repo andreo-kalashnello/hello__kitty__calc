@@ -132,6 +132,9 @@ function calculate() {
     updateOutput(result);
     resetNext = true;
     baseConverted = false;
+
+    addToHistory(`${expr} = ${result}`);
+
   } catch (e) {
     updateOutput("Error");
   }

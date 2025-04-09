@@ -87,3 +87,54 @@ body {
 .memory-text:hover {
   color: #fc008f;
 }
+
+#insert {
+  margin-left: 280px;
+}
+
+.history-panel {
+  position: absolute;
+  left: 220px;
+  top: 160px;
+  width: 280px;
+  background-color: #fc90cd;
+  padding: 10px;
+  color: black;
+  max-height: 300px;
+  z-index: 10;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+#clearHistoryBtn {
+  background-color: #ff6cbf;
+  color: white;
+  border: none;
+  padding: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.2s;
+}
+
+#clearHistoryBtn:hover {
+  background-color: #fc008f;
+}
+
+.history-panel div {
+  margin-bottom: 10px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.history-panel .history-item:hover {
+  background-color: #ff6cbf;
+}
+
+.hidden {
+  display: none;
+}
