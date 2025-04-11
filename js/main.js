@@ -131,6 +131,7 @@ function calculate() {
     if (!parsed) return updateOutput("0");
 
     const result = eval(parsed);
+    if (!isFinite(result)) throw new Error("Division by zero");
 
     updateExpression(expr);
     updateOutput(result);
